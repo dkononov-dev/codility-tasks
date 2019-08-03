@@ -1,5 +1,7 @@
 package codility.tasks;
 
+import java.util.Arrays;
+
 public class CyclicRotation {
 
     /**
@@ -16,20 +18,14 @@ public class CyclicRotation {
 
         K = K % A.length;
 
-        if (K < 1) {
+        if (K == 0) {
             return A;
         }
 
-        int[] rotatedA = new int[A.length];
+        int[] pushedOutElementsOfA = Arrays.copyOfRange(A, A.length - K, A.length);
+        System.arraycopy(A, 0, A, K, A.length - K);
+        System.arraycopy(pushedOutElementsOfA, 0, A, 0, pushedOutElementsOfA.length);
 
-        for(int i=0, j=A.length-K; i<K; i++,j++) {
-            rotatedA[i] = A[j];
-        }
-
-        for(int i=K, j=0; i<A.length; i++,j++) {
-            rotatedA[i] = A[j];
-        }
-
-        return rotatedA;
+        return A;
     }
 }
