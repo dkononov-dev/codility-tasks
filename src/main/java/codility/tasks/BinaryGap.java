@@ -2,6 +2,11 @@ package codility.tasks;
 
 public class BinaryGap {
 
+    /**
+     * Find longest sequence of zeros in binary representation of an integer.
+     * @param N  an integer within the range [1..2,147,483,647].
+     * @return any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N
+     */
     public int solution(int N) {
 
         int maxGap = 0;
