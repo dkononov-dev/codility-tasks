@@ -16,8 +16,9 @@ public class NumberOfDiscIntersectionsTest {
     }
 
     @Test
-    public void test() {
+    public void whenDiscsIntersect__thenCorrectCountReturned() {
         assertThat(numberOfDiscIntersections.solution(new int[]{1, 5, 2, 1, 4, 0}), equalTo(11));
+        assertThat(numberOfDiscIntersections.solution(new int[]{1,0,0,3}), equalTo(4));
     }
 
 }

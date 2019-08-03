@@ -22,6 +22,7 @@ public class NumberOfDiscIntersections {
             }
         }
 
+
         Event[] events = new Event[len * 2];
 
         for (int i = 0, j = 0; i < len; i++) {
@@ -39,7 +40,6 @@ public class NumberOfDiscIntersections {
                 return b.intersectingDiscsDelta - a.intersectingDiscsDelta;
             }
         });
-
 
         int intersections = 0;
         for (int i = 0, intersectingDiscs = 0; i < events.length; i++) {
